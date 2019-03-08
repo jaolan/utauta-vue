@@ -1,6 +1,7 @@
 <template>
-  <div class="hello">
+  <div class="home container">
     <h1>{{ msg }}</h1>
+    <button class="btn btn--">click me</button>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
