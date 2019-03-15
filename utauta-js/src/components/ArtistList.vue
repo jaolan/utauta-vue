@@ -1,7 +1,8 @@
 <template>
     <div class="page-header">
-  <h1>Example Artist List <small>Subtext for header</small></h1>
-</div>
+  <h1>Artists</h1>
+  <small>do you wanna dance with me, tonight?</small>
+  </div>
 </template>
 
 <script>
