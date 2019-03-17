@@ -1,6 +1,6 @@
 <template>
     <li class="list-group-item-media" >
-        <a href=#><img class="mr-3" src="http://kiokunokiroku.jp/artist/img/artist/000190/artist.jpg" height="100" width="100"/></a>
+        <a href="/artists/name-placeholder"><img class="mr-3" src="http://kiokunokiroku.jp/artist/img/artist/000190/artist.jpg" height="100" width="100"/></a>
         <div class="media-body">
             Artist Title Here
             <div>
@@ -26,8 +26,12 @@ export default {
         border-right: 3px solid #c73e67;
         border-left: 3px solid #c73e67;
         border-top: 3px solid #c73e67;
-        border-bottom: 1.5px solid #c73e67
     }
+
+    li:nth-last-child(1){
+    border-bottom: 3px solid #c73e67;
+    }
+
     li:hover {
         width: 100%;
         background-color: rgb(88, 87, 87);

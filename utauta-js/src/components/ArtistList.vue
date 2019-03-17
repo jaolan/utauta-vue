@@ -8,6 +8,7 @@
   <ul class="list-group col-md-4">
     <ArtistListItem>item</ArtistListItem>
     <ArtistListItem>item</ArtistListItem>
+    <ArtistListItem>item</ArtistListItem>
   </ul>
   </div>
 </div>
