@@ -15,12 +15,31 @@ import AlbumPage from './components/AlbumPage';
 import NavBar from './components/NavBar.vue'
 import SearchBar from './components/SearchBar.vue'
 
+import axios from 'axios'
+
 export default {
   name: 'app',
   components: {
     NavBar,
     SearchBar,
 
+  },
+  data() {
+    return {
+      artists: [],  
+    }
+  },
+  methods:{//need search endpt
+    getArtists() {
+      axios.get('http://localhost:9000/artists')
+        .then(response => {
+          console.log(response);
+          this.artists = response.data;
+        });
+    }
+  },
+  created: function() {
+    this.getArtists();
   }
 }
 </script>

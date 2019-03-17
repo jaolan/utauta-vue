@@ -13,6 +13,7 @@
 
 <script>
 export default {
+//URLS ARE API, HOSTED, endpt
 //artistlist will be intgrated w/ artistlistitems.
 }
 </script>
@@ -26,6 +27,7 @@ export default {
         border-right: 3px solid #c73e67;
         border-left: 3px solid #c73e67;
         border-top: 3px solid #c73e67;
+        color: aliceblue;
     }
 
     li:nth-last-child(1){
