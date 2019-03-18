@@ -5,6 +5,7 @@ import ArtistList from './components/ArtistList';
 import ArtistPage from './components/ArtistPage';
 import AlbumList from './components/AlbumList';
 import AlbumPage from './components/AlbumPage';
+import About from './components/About';
 
 import 'bootstrap';
 import './assets/app.scss';
@@ -18,7 +19,8 @@ const router = new VueRouter({
     { path: '/Artists', component: ArtistList },
     { path: '/Artists/:ArtistName', component: ArtistPage},
     { path: '/Albums', component: AlbumList },
-    { path: '/Albums/:AlbumName', component: AlbumPage}
+    { path: '/Albums/:AlbumName', component: AlbumPage},
+    { path: '/About', component: About }
   ] 
 });
 
