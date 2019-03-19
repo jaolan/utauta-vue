@@ -6,6 +6,7 @@ import ArtistPage from './components/ArtistPage';
 import AlbumList from './components/AlbumList';
 import AlbumPage from './components/AlbumPage';
 import About from './components/About';
+//import HomePage from './components/HomePage';
 
 import 'bootstrap';
 import './assets/app.scss';
@@ -16,6 +17,7 @@ Vue.use(VueRouter);
 const router = new VueRouter({
   mode: 'history',
   routes: [
+    //{ path: '/', component: HomePage},
     { path: '/Artists', component: ArtistList },
     { path: '/Artists/:ArtistName', component: ArtistPage},
     { path: '/Albums', component: AlbumList },
