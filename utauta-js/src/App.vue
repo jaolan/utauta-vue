@@ -1,8 +1,7 @@
 <template>
   <div id="app">
     <nav-bar/>
-    <FeaturedAlbum></FeaturedAlbum>
-    <SearchBar/>
+    
     <router-view></router-view>
   </div>
 </template>
