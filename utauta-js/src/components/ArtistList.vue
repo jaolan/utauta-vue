@@ -1,5 +1,6 @@
 <template>
 <div>
+  <SearchBar/>
   <div class="page-header">
   <h1>Artists</h1>
   <small>do you wanna dance with me, tonight?</small>
@@ -16,11 +17,13 @@
 </template>
 
 <script>
-import ArtistListItem from './ArtistListItem'
+import ArtistListItem from './ArtistListItem';
+import SearchBar from './SearchBar';
+
 export default {
     name: 'ArtistList',
     components: {
-      ArtistListItem
+      ArtistListItem, SearchBar
     }
 }
 </script>

@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <nav-bar/>
-    
     <router-view></router-view>
   </div>
 </template>
@@ -31,7 +30,14 @@ export default {
   },
   methods:{//need search endpt
     getArtists() {
-      axios.get('http://localhost:9000/artists')
+      axios.get('http://localhost:9000/artists', {
+        params: {
+          id: 'artist_id',
+          name: 'name',
+          desc: 'description',
+          pic: 'Picture'
+        }
+      })
         .then(response => {
           console.log(response);
           this.artists = response.data;

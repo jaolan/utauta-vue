@@ -13,6 +13,7 @@
 
 <script>
 export default {
+    props: ['artists'],
 //URLS ARE API, HOSTED, endpt
 //artistlist will be intgrated w/ artistlistitems.
 }
