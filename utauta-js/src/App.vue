@@ -23,30 +23,7 @@ export default {
     SearchBar,
     FeaturedAlbum,
   },
-  data() {
-    return {
-      artists: [],  
-    }
-  },
-  methods:{//need search endpt
-    getArtists() {
-      axios.get('http://localhost:9000/artists', {
-        params: {
-          id: 'artist_id',
-          name: 'name',
-          desc: 'description',
-          pic: 'Picture'
-        }
-      })
-        .then(response => {
-          console.log(response);
-          this.artists = response.data;
-        });
-    }
-  },
-  created: function() {
-    this.getArtists();
-  }
+  
 }
 </script>
 

@@ -7,9 +7,11 @@
   </div>
   <div align="center">
   <ul class="list-group col-md-4">
-    <ArtistListItem>item</ArtistListItem>
-    <ArtistListItem>item</ArtistListItem>
-    <ArtistListItem>item</ArtistListItem>
+    <ArtistListItem
+      v-for="artist in artists"
+      :artist="artist"
+      :key="artist.artist_id"
+    />
   </ul>
   </div>
 </div>
@@ -19,11 +21,29 @@
 <script>
 import ArtistListItem from './ArtistListItem';
 import SearchBar from './SearchBar';
+import axios from 'axios';
 
 export default {
     name: 'ArtistList',
     components: {
       ArtistListItem, SearchBar
+    },
+    data() {
+      return {
+        artists: [],  
+      }
+    },
+    methods:{//need search endpt
+      getArtists() {
+        axios.get('http://localhost:9000/artists')
+          .then(response => {
+            console.log(response);
+            this.artists = response.data;
+          });
+      }
+    },
+    created: function() {
+      this.getArtists();
     }
 }
 </script>

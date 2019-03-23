@@ -1,10 +1,10 @@
 <template>
-    <li class="list-group-item-media" >
-        <a href="/artists/name-placeholder"><img class="mr-3" src="http://kiokunokiroku.jp/artist/img/artist/000190/artist.jpg" height="100" width="100"/></a>
+    <li @click="onArtistSelect" class="list-group-item-media" >
+        <img class="mr-3" :src="artist.Picture" height="100" width="100"/>
         <div class="media-body">
-            Artist Title Here
+            {{ artist.name }}
             <div>
-            <small>description goes right here in this box. I am writing alot here to see how far this box will wrap around for this entry.</small>
+            <small>{{ artist.description }}</small>
             </div>
         </div>
 
@@ -13,9 +13,18 @@
 
 <script>
 export default {
-    props: ['artists'],
+    name: "ArtistListItem",
+    props: ['artist'],
 //URLS ARE API, HOSTED, endpt
 //artistlist will be intgrated w/ artistlistitems.
+    methods: {
+        onArtistSelect(){
+            this.$router.push({ name: 'artist', params: { id: this.artist.artist_id } })
+        }
+    },
+    mounted: function() {
+        console.log("artist: ", this.artist)
+    }
 }
 </script>
 

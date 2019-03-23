@@ -18,11 +18,11 @@ const router = new VueRouter({
   mode: 'history',
   routes: [
     { path: '/', component: HomePage, App},
-    { path: '/Artists', component: ArtistList },
-    { path: '/Artists/:ArtistName', component: ArtistPage},
-    { path: '/Albums', component: AlbumList },
-    { path: '/Albums/:AlbumName', component: AlbumPage},
-    { path: '/About', component: About }
+    { path: '/artists/', component: ArtistList },
+    { path: '/artist/:id', component: ArtistPage, name: "artist"},
+    { path: '/albums', component: AlbumList },
+    { path: '/albums/:AlbumName', component: AlbumPage},
+    { path: '/about', component: About }
   ] 
 });
 

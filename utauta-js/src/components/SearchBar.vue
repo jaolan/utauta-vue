@@ -2,7 +2,6 @@
     <div class="header">
         <h2>Get your groove on.</h2>
         <input
-            @input="onInput"
             class="search-bar"
             placeholder="Search"
         />
