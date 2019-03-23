@@ -19,18 +19,34 @@
 import ArtistList from './ArtistList'
 import ArtistListItem from './ArtistListItem'
 import SearchBar from './SearchBar';
+import axios from 'axios';
 
 export default {
     components: {
       ArtistListItem, SearchBar,
     },
+    data() {
+      return {
+        albums: [],  
+      }
+    },
     methods: {
       getAlbums() {
         // make axios call to get albums from artist
         // get artist id from route
+        // use id in axios call
         //log the axios call them impl front
-        const id =  this.$route.params.id;
+        
+        axios.get('http://localhost:9000/albums')
+          .then(response => {
+            console.log(response);
+            this.albums = response.data;
+          });
       }
+    },
+    created: function() {
+        const id =  this.$route.params.id;
+        this.getAlbums();
     }
 }
 </script>
