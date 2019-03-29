@@ -8,6 +8,12 @@
 <div class="discography">
   <h2>Discography</h2>
   <div align="center">
+    <ul class="list-group col-md-4">
+    <AlbumListItem
+      v-for="album in albums"
+      :album="album"
+      :key="album.album_id"
+    /></ul>
   </div>
 </div>
 </div>
@@ -17,13 +23,14 @@
 <script>
 //TODO: All ArtistList and related should be AlbumList upon completion of testing
 import ArtistList from './ArtistList'
-import ArtistListItem from './ArtistListItem'
+import ArtistListItem from './ArtistListItem';
+import AlbumListItem from './AlbumListItem';
 import SearchBar from './SearchBar';
 import axios from 'axios';
 
 export default {
     components: {
-      ArtistListItem, SearchBar,
+      ArtistListItem, SearchBar, AlbumListItem
     },
     data() {
       return {
